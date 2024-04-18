@@ -1,0 +1,477 @@
+<template id="template" xml:space="preserve">
+    <t t-name="classifieds_dashboard">
+        <div class="oh_classifieds_dashboards">
+            <div class="container-fluid o_classifieds_main_dashboard"></div>
+        </div>
+    </t>
+    <t t-name="classifieds_dashboard_data">
+        <link src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <div style="background:#ffffff; padding:10px; font-size:14px; width:100%; border-bottom-left-radius: 27px 27px; border-bottom-right-radius: 27px 27px;">
+       <div class="col-lg-12">
+           <div class="row">
+               <div id="welcomenote" class="col-lg-11 welcomenote common_margin"
+                    style="font-weight:bold; font-size:16px;"> Welcome to CLASSIFIEDS</div>
+               <div class="col-lg-1" style="float:right; text-align:center"><i class="fa fa-user " aria-hidden="true" data-bs-toggle="modal" data-bs-target="#myModal" ></i></div>
+           </div>
+       </div>
+        </div>
+        <!--            <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>-->
+        <script src="https://unpkg.com/bootstrap-table@1.22.0/dist/bootstrap-table.min.js"></script>
+        <script src="https://unpkg.com/bootstrap-table@1.22.0/dist/extensions/sticky-header/bootstrap-table-sticky-header.min.js"></script>
+
+        <div style="height:10px; width:100%">&nbsp;</div>
+        <div class="bg-primary pt-10 pb-21 mt-n6 mx-n4" style="background-color:#624bff!important;"></div>
+
+
+        <div class="container-fluid mt-n22 ">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-12">
+
+                            <div class="d-flex justify-content-between align-items-center"
+                                 style="margin-bottom:3.5rem;">
+
+                            </div>
+                        </div>
+                    </div>
+            <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-md-12 col-12">
+
+                            <div class="card card-lift">
+
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h4 class="mb-0"> CIO</h4>
+                                        </div>
+                                        <div class="icon-shape icon-md bg-primary-soft text-primary rounded-2">
+                                            <i class="fa fa-shopping-cart fa-fw fa-2x"></i>
+                                        </div>
+                                    </div>
+
+                                      <div class="reta_card_value">
+                                            <h1><t t-esc="widget.cio"/></h1>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                <div class="col-xl-3 col-lg-6 col-md-12 col-12">
+
+                            <div class="card  card-lift">
+
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h4 class="mb-0">Scheduling</h4>
+                                        </div>
+                                        <div class="icon-shape icon-md bg-primary-soft text-primary rounded-2"><i class="fa fa-calendar fa-fw fa-2x"></i>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="reta_card_value">
+                                            <h1><t t-esc="widget.scheduling"/></h1>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                <div class="col-xl-3 col-lg-6 col-md-12 col-12">
+
+                            <div class="card card-lift">
+
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h4 class="mb-0"> Waiting for Approval</h4>
+                                        </div>
+                                        <div class="icon-shape icon-md bg-primary-soft text-primary rounded-2">
+                      <i class="fa fa-check-square-o fa-fw fa-2x"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="reta_card_value">
+                                       <h1> <t t-esc="widget.waiting_for_approval"/></h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                <div class="col-xl-3 col-lg-6 col-md-12 col-12">
+
+                            <div class="card  card-lift" style="width:415px;">
+
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h4 class="mb-0">Release Orders</h4>
+                                        </div>
+                                        <div class="icon-shape icon-md bg-primary-soft text-primary  rounded-2"><i class="fa fa fa-book fa-fw fa-2x"></i>
+
+                                        </div>
+                                    </div>
+
+                                   <div class="reta_card_value">
+                                       <h1> <t t-esc="widget.release_orders"/></h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+            </div>
+
+
+            <div class="row margin">
+            <div class="col-xl-6 col-md-12 col-12">
+              <div class="row row-cols-lg-2 row-cols-1">
+                <div class="col">
+                 <div class="card card-lift">
+
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h4 class="mb-0">Invoices</h4>
+                                        </div>
+                                        <div class="icon-shape icon-md bg-primary-soft text-primary rounded-2">
+                                            <i class="fa fa-pencil-square-o fa-fw fa-2x"></i>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="lh-1"><div class="Design">
+               <div class="row">
+                   <div class="circle-tile-description col-lg-4"><strong>Invoice Amount</strong></div>
+                   <div class="circle-tile-description col-lg-4"> : ₹<t t-esc="widget.invoice_amount"/></div>
+               </div>
+               <div class="row mt-3"><div class="circle-tile-description col-lg-4 "><strong>Amount Due</strong></div>
+                   <div class="circle-tile-description col-lg-4"> : ₹<t t-esc="widget.invoice_due"/></div>   </div>
+                </div>
+
+
+                                    </div>
+                                </div>
+                            </div></div>
+                  <div class="col" style=" margin-left: 0px;"><div class="card card-lift">
+
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h4 class="mb-0">Deposits</h4>
+                                        </div>
+                                        <div class="icon-shape icon-md bg-primary-soft text-primary rounded-2"><i class="fa  fa-credit-card-alt fa-fw fa-2x"></i>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="lh-1"> <div class="Design">
+               <div class="row">
+                   <div class="circle-tile-description  col-lg-4"><strong>Deposit Amount</strong></div>
+                   <div class="circle-tile-description  col-lg-4"> : ₹ <t t-esc="widget.deposit_amt"/></div>
+               </div>
+                                        <div class="row mt-3"><div class="circle-tile-description  col-lg-4"><strong>Outstanding</strong></div>
+                                            <div class="circle-tile-description  col-lg-4"> : ₹ <t t-esc="widget.outstanding_amt"/></div>   </div>
+                </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                </div>
+                  <div class="col margin">
+                  <div class="card  card-lift">
+
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between align-items-center  mb-3">
+                                        <div>
+                                            <h4 class="mb-0">Commissions</h4>
+                                        </div>
+                                        <div class="icon-shape icon-md bg-primary-soft text-primary rounded-2"><i class="fa fa-money fa-fw fa-2x"></i>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="lh-1"> <div class="Design">
+               <div class="row">
+                   <div class="circle-tile-description  col-lg-4"><strong>Collected Payment</strong></div>
+                   <div class="circle-tile-description  col-lg-4"> : ₹ <t t-esc="widget.total_payment_received"/></div>
+               </div>
+                                        <div class="row mt-3"><div class="circle-tile-description  col-lg-4"><strong>Commissions </strong></div>
+                                            <div class="circle-tile-description  col-lg-4"> : ₹ <t t-esc="widget.total_commission_received"/></div>   </div>
+                </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                  <div class="col margin"><div class="card  card-lift">
+
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h4 class="mb-0">Incentives</h4>
+                                        </div>
+                                        <div class="icon-shape icon-md bg-primary-soft text-primary  rounded-2"><i class="fa fa fa-cc-visa fa-fw fa-2x"></i>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="lh-1"><div class="Design">
+               <div class="row">
+                   <div class="circle-tile-description  col-lg-4"><strong>Collected Payment</strong></div>
+                   <div class="circle-tile-description  col-lg-4"> : ₹ <t t-esc="widget.total_incentive_payment_received"/></div>
+               </div>
+               <div class="row mt-3"><div class="circle-tile-description  col-lg-4"><strong>Incentive</strong></div>
+                   <div class="circle-tile-description  col-lg-4"> : ₹ <t t-esc="widget.total_incentive_amount"/></div>   </div>
+                </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                </div>
+              </div>
+            </div>
+                <div class="col-xl-6 col-md-12 col-12">
+
+
+
+
+                    <div class="graph_div_table" style="height:110%;">
+                        <!-- <div style='height:150px; width:100%'></div> -->
+                        <div id="tabletargets">
+                              <div class="tableheader_new"
+                                   style="margin-bottom:2px;text-align: center;/* margin-right: 0px; *//* margin-left: 0px; */">Targets</div>
+
+                            <div class="table-responsive scroll scroll1" style="max-height:500px;">
+
+                        <t t-foreach="widget.incentive_lines" t-as="incentive_line">
+                                    </t>
+                                <t t-foreach="widget.incentive_lines" t-as="incentive_line">
+                                    </t>
+                                <table class="table table-striped">
+                           <thead style="position: sticky;top: 0; background:#b8d3ef;">
+<!--                               #8bdbcc;-->
+                               <tr style="font-size:15px;">
+                                    <th name="th_product_id" class="headertablefixed" style="color:#000"><strong>Employee</strong></th>
+                                   <th name="th_target_amount" class=" headertablefixed text-center" style="color:#000"><strong>Period</strong></th>
+                                   <th name="th_target_amount" class="headertablefixed text-center" style="color:#000"><strong>Target Amount</strong></th>
+                                   <th name="th_ro_total_amount" class="headertablefixed text-center"
+                                       style="color:#000"><strong>RO Total Amount</strong></th>
+                                   <th name="th_received_amount" class="headertablefixed text-center"
+                                       style="color:#000"><strong>Received Payment</strong></th>
+                                   <th name="th_progress_bar" class="headertablefixed text-center" style="color:#000"><strong>Progress</strong></th>
+                                </tr>
+                            </thead>
+                                    <tbody>
+                                <t t-foreach="widget.incentive_lines" t-as="incentive_line">
+                                    <tr t-att-class='o_line_section'>
+                                        <td style='padding:10px;'>
+                                            <span><t t-esc="incentive_line.employee_name"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <span><t t-esc="incentive_line.target_period"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <span>₹</span>
+                                            <span><t t-esc="incentive_line.target_amt"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <span>₹</span>
+                                            <span><t t-esc="incentive_line.so_total_amt"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <span>₹</span>
+                                            <span><t t-esc="incentive_line.recieved_payment"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <progress id="progress_bar" t-att-value="incentive_line.progress"
+                                                      max="100"></progress>
+                                            <span><t t-esc="incentive_line.progress"/></span>
+                                            <span> %</span>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+
+                        </div></div></div>
+          </div>
+
+                    </div>
+
+        <div class="row">
+
+
+            <div class="col-xl-4 col-md-12 col-12" style="margin-left: 13px;">
+
+
+                 <div class="col-lg-4 graph_div" style="width:70% !important; margin-top: -310px;height:auto;">
+
+<!--                            <div class="col-md-8 graph_title">Graphs</div>-->
+                            <div class="col-md-12 graph_icon">
+                                <ul class="nav nav-tabs  mb-3" id="ex1" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                                class="nav-link active"
+                                                id="ex3-tab-1"
+                                                data-bs-toggle="tab"
+                                                href="#ex3-tabs-1"
+                                                role="tab"
+                                                aria-controls="ex3-tabs-1"
+                                                aria-selected="true"
+                                        > <i class="fa fa-pie-chart" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                                class="nav-link"
+                                                id="ex3-tab-2"
+                                                data-bs-toggle="tab"
+                                                href="#ex3-tabs-2"
+                                                role="tab"
+                                                aria-controls="ex3-tabs-2"
+                                                aria-selected="false"
+                                        ><i class="fa fa-bar-chart" aria-hidden="true"></i></a
+                                        >
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                                class="nav-link"
+                                                id="ex3-tab-3"
+                                                data-bs-toggle="tab"
+                                                href="#ex3-tabs-3"
+                                                role="tab"
+                                                aria-controls="ex3-tabs-3"
+                                                aria-selected="false"
+                                        ><i class="fa fa-line-chart" aria-hidden="true"></i></a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        <div class="tab-content" id="ex2-content">
+                            <div class="tab-pane fade show active" id="ex3-tabs-1" role="tabpanel"
+                                 aria-labelledby="ex3-tab-1">
+                                <div>
+                                    <canvas id='classifier_pie_chart' height="300vh" width="400vw"/>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
+                                <div>
+                                    <canvas id='classifier_bar_graph' height="300vh" width="400vw"/>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ex3-tabs-3" role="tabpanel" aria-labelledby="ex3-tab-3">
+                                <div>
+                                    <canvas id='classifier_line_graph' height="300vh" width="400vw"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+            <div class="col-xl-4 col-md-12 col-12" style="width: 397px;height: 360px;background: white; border: 1px solid #efefef; margin-top: -310px; margin-left: -141px;border-radius: 5px;"></div>
+                    </div>
+
+
+
+
+
+
+
+
+
+        <div class="modal" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+        <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+        <!-- Modal body -->
+        <!--        <div class="modal-body">-->
+        <!--            <div class="container mt-5 d-flex justify-content-center">-->
+        <!--           <div class="card p-3">-->
+
+        <!--                <div class="d-flex align-items-center">-->
+
+        <!--                    <div class="image">-->
+        <!--                <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&q=80"-->
+        <!--                     class="rounded" width="155">-->
+        <!--                </div>-->
+
+        <!--                    <div class="ml-3 w-100">-->
+
+        <!--                   <h4 class="mb-0 mt-0">Alex HMorrision</h4>-->
+        <!--                        <span>Senior Journalist</span>-->
+
+        <!--                        <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">-->
+
+        <!--                    <div class="d-flex flex-column">-->
+
+        <!--                        <span class="articles">Articles</span>-->
+        <!--                        <span class="number1">38</span>-->
+
+        <!--                    </div>-->
+
+        <!--                            <div class="d-flex flex-column">-->
+
+        <!--                        <span class="followers">Followers</span>-->
+        <!--                                <span class="number2">980</span>-->
+
+        <!--                    </div>-->
+
+
+        <!--                            <div class="d-flex flex-column">-->
+
+        <!--                        <span class="rating">Rating</span>-->
+        <!--                                <span class="number3">8.9</span>-->
+
+        <!--                    </div>-->
+
+        <!--                   </div>-->
+
+
+        <!--                        <div class="button mt-2 d-flex flex-row align-items-center">-->
+
+        <!--                    <button class="btn btn-sm btn-outline-primary w-100">Chat</button>-->
+        <!--                            <button class="btn btn-sm btn-primary w-100 ml-2">Follow</button>-->
+
+
+        <!--                   </div>-->
+
+
+        <!--                </div>-->
+
+
+        <!--                </div>-->
+
+        <!--            </div>-->
+
+        <!--                </div>-->
+
+        <!--      </div>-->
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+	</div>
+    </t>
+
+</template>

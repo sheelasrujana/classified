@@ -1,0 +1,671 @@
+<template id="template" xml:space="preserve">
+
+    <t t-name="mgmt_dashboard">
+
+        <div class="oh_reta_dashboards">
+            <div class="container-fluid o_mgmt_main_dashboard"></div>
+
+        </div>
+    </t>
+
+    <t t-name="mgmt_dashboard_data">
+        <link src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <div style="background:#aaf5e4; padding:10px; font-size:14px; width:100%; border-bottom-left-radius: 27px 27px; border-bottom-right-radius: 27px 27px;">
+       <div class="col-lg-12">
+           <div class="row">
+               <div id="myDiv" class="col-lg-3"></div>
+               <div id="welcomenote" class="col-lg-8 welcomenote common_margin"
+                    style="font-weight:bold; font-size:16px;"> Welcome to Classifieds </div>
+
+               <div class="col-lg-1" style="float:right; text-align:center"><i class="fa fa-user " aria-hidden="true" data-bs-toggle="modal" data-bs-target="#myModal" ></i></div>
+
+           </div>
+
+       </div>
+
+
+        </div>
+
+        <div class="row o_dashboard_reta">
+
+            <script src="https://unpkg.com/bootstrap-table@1.22.0/dist/bootstrap-table.min.js"></script>
+            <script src="https://unpkg.com/bootstrap-table@1.22.0/dist/extensions/sticky-header/bootstrap-table-sticky-header.min.js"></script>
+
+            <div class="container" style="display:block;">
+
+
+                    <div style="padding: 3px;/* box-shadow: 2px 2px 2px 2px #dbdbe3 !important; *//* background: #fff0; */border-radius: 5px;"><div class="row mt-5 mb-5" style="margin-left: -181px;">
+                        <div class="col-md-12 col-xl-4 px-6">
+<div class="card comp-card mb-2" style="border-left: 3px solid #e16f6f;">
+<div class="card-body">
+<div class="row align-items-center">
+<div class="col">
+<h6 class="m-b-25" style="font-weight:500;  font-size: 17px;">CIO</h6>
+
+
+</div>
+    <div class="col-auto avatar flex-shrink-0" style="color: #e16f6f;">
+<i class="fa fa-shopping-cart fa-fw fa-2x" style="color: #e16f6f;"></i>
+</div>
+</div>
+    <div class="Design1">
+               <div class="row">
+                   <div class="circle-tile-description col-lg-4"><strong>Issued CIO</strong></div>
+                   <div class="circle-tile-description col-lg-4"> : <t t-esc="widget.issued_cio"/> </div>
+               </div>
+        <div class="row mt-2"><div class="circle-tile-description col-lg-4"><strong>Total Value</strong></div>
+            <div class="circle-tile-description col-lg-4"> : ₹ <t t-esc="widget.total_value_cio"/> </div>   </div>
+                </div>
+</div>
+</div>
+                            <div class="card comp-card mb-2 mt-3" style="border-left: 3px solid #4099ff;">
+<div class="card-body">
+<div class="row align-items-center">
+<div class="col">
+<h6 class="m-b-25" style="font-weight:500;  font-size: 17px; ">Release Order</h6>
+
+
+</div>
+    <div class="col-auto" style="color: #4099ff;">
+<i class="fa fa-calendar fa-fw fa-2x" style="color: #4099ff;"></i>
+</div>
+</div>
+    <div class="Design1">
+               <div class="row">
+                   <div class="circle-tile-description  col-lg-4"><strong>Received RO</strong></div>
+                   <div class="circle-tile-description  col-lg-4"> : <t t-esc="widget.received_ro"/> </div>
+               </div>
+        <div class="row mt-2"><div class="circle-tile-description col-lg-4"><strong>Total Value</strong></div>
+            <div class="circle-tile-description col-lg-4"> : ₹
+                                            <t t-esc="widget.total_value_ro"/> </div>   </div>
+                </div>
+</div>
+</div>
+
+</div> <div class="col-md-12 col-xl-4 "><div class="card comp-card mb-2" style="border-left: 3px solid #28a745;margin-left: -73px; height: 252px;">
+<div class="card-body">
+<div class="row align-items-center">
+<div class="col">
+<h6 class="m-b-25" style=" font-weight:500;  font-size: 17px;"> Payments</h6>
+
+
+</div>
+    <div class="col-auto" style="color: #28a745;">
+<i class="fa fa-check-square-o fa-fw fa-2x" style="color: #28a745;"></i>
+</div>
+</div>
+    <div class="Design1">
+               <div class="row">
+                   <div class="circle-tile-description col-lg-4"><strong>Pending Payment</strong></div>
+                   <div class="circle-tile-description  col-lg-4"> : ₹ <t t-esc="widget.pending_payment"/> </div>
+               </div>
+        <div class="row mt-2"><div class="circle-tile-description  col-lg-4"><strong>Payment Collected</strong></div>
+            <div class="circle-tile-description col-lg-4"> : ₹ <t t-esc="widget.payment_collected"/></div>
+            <hr/>
+        </div>
+                </div>
+    <div class="Design1">
+               <div class="row ">
+                   <div class="circle-tile-description col-lg-4"><strong>Cash</strong></div>
+                   <div class="circle-tile-description col-lg-4">  : ₹ <t t-esc="widget.cash"/> </div>
+               </div>
+        <div class="row mt-2"><div class="circle-tile-description col-lg-4"><strong>UPI / QR</strong></div>
+            <div class="circle-tile-description  col-lg-4"> : ₹ <t t-esc="widget.upi_qr"/></div>   </div>
+                </div>
+    <div class="Design1">
+               <div class="row mt-2">
+                   <div class="circle-tile-description  col-lg-4"><strong>Bank/NEFT</strong></div>
+                   <div class="circle-tile-description col-lg-4"> : ₹ <t t-esc="widget.bank_neft"/> </div>
+               </div>
+        <div class="row mt-2"><div class="circle-tile-description col-lg-4"><strong>PDC</strong></div>
+            <div class="circle-tile-description col-lg-4"> : ₹ <t t-esc="widget.pdc"/> </div>   </div>
+                </div>
+</div>
+</div></div><div class="col-md-12 col-xl-4 " style="
+    width: 47%;
+    height: 255px;
+    border: 2px solid #0000000f;
+    margin-left: -295px;
+    background: white;
+    border-radius: 10px;
+"></div></div>
+           </div>
+                <div class="row" style="margin-top: -5px;"><div class="col-lg-12  order-0" >
+    <div class="row"
+         style="padding:20px;border: 1px solid #0000000d;margin: 0px 3px 0px 0px;border-radius: 5px;background: white;">
+
+                    <div class="col-lg-1">Unit Name</div>
+
+        <div class="col-lg-3">
+                        <select class="form-control">
+                        <option>Gandhi Nagar Unit </option>
+                            <option></option>
+                            <option></option>
+                            <option></option>
+                    </select>
+                    </div>
+        <div class="col-lg-1">From Date</div>
+        <div class="col-lg-3"><input type="date" id="da" name="From Date" class="form-control"/></div>
+        <div class="col-lg-1">To Date</div>
+        <div class="col-lg-3"><input type="date" id="to" name="To Date" class="form-control"/></div>
+
+            </div>
+
+  </div>
+
+</div>
+
+
+                <div style="height:30px; width:100%"></div>
+                <div class="row mb-5" style="margin-left: -4px;margin-top: -13px;">
+                        <div class="col-md-12 col-xl-8 graph_div_table"
+                             style="height: 500px;/* margin-right: -246px; */">
+                            <div id="tabletargets">
+                              <div class="tableheader_new" style="margin-bottom:2px; text-align: center;">Targets</div>
+
+                                <div class="table-responsive scroll scroll1" style="max-height:500px;">
+
+                        <table class="table table-striped">
+                           <thead style="position: sticky;top: 0; background:#aaf5e4">
+                                <tr style="font-size:16px;">
+                                    <th name="th_product_id" class="headertablefixed" style="color:#000"><strong>Unit Name</strong></th>
+
+                                    <th name="th_target_amount" class="headertablefixed text-center" style="color:#000"><strong>Target Amount</strong></th>
+                                    <th name="th_ro_total_amount" class="headertablefixed text-center"
+                                        style="color:#000"><strong>RO Value</strong></th>
+                                    <th name="th_received_amount" class="headertablefixed text-center"
+                                        style="color:#000"><strong>Collections</strong></th>
+                                    <th name="th_progress_bar" class="headertablefixed text-center" style="color:#000"><strong>Progress</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                 <t t-foreach="widget.unit_target_incentive_lines" t-as="incentive_line">
+                                    <tr t-att-class='o_line_section'>
+                                        <td style='padding:10px;'>
+                                            <span><t t-esc="incentive_line.unit_name"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <span><t t-esc="incentive_line.target_amount"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <span>₹</span>
+                                            <span><t t-esc="incentive_line.ro_value"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <span>₹</span>
+                                            <span><t t-esc="incentive_line.collections"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <progress id="progress_bar" t-att-value="incentive_line.progress" max="100"></progress>
+                                            <span><t t-esc="incentive_line.progress"/></span>
+                                            <span> %</span>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+
+
+                        </table>
+                    </div>
+
+                    </div>
+</div>
+                <div class="col-xl-4 col-md-12 col-12" style="/* margin-left: 13px; */">
+
+
+                 <div class="col-lg-4 graph_div" style="width:99% !important;/* margin-top: -310px; */height:500px;">
+
+
+                          <div class="col-md-12 graph_icon">
+                                <ul class="nav nav-tabs  mb-3" id="ex1" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                                class="nav-link active"
+                                                id="ex3-tab-1"
+                                                data-bs-toggle="tab"
+                                                href="#ex3-tabs-1"
+                                                role="tab"
+                                                aria-controls="ex3-tabs-1"
+                                                aria-selected="true"
+                                        > <i class="fa fa-pie-chart" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                                class="nav-link"
+                                                id="ex3-tab-2"
+                                                data-bs-toggle="tab"
+                                                href="#ex3-tabs-2"
+                                                role="tab"
+                                                aria-controls="ex3-tabs-2"
+                                                aria-selected="false"
+                                        ><i class="fa fa-bar-chart" aria-hidden="true"></i></a
+                                        >
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                                class="nav-link"
+                                                id="ex3-tab-3"
+                                                data-bs-toggle="tab"
+                                                href="#ex3-tabs-3"
+                                                role="tab"
+                                                aria-controls="ex3-tabs-3"
+                                                aria-selected="false"
+                                        ><i class="fa fa-line-chart" aria-hidden="true"></i></a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        <div class="tab-content" id="ex2-content">
+                            <div class="tab-pane fade show active" id="ex3-tabs-1" role="tabpanel"
+                                 aria-labelledby="ex3-tab-1">
+                                <div>
+                                    <canvas id='reta_mgmt_pie_chart' height="300vh" width="400vw"/>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
+                                <div>
+                                    <canvas id='reta_mgmt_bar_graph' height="300vh" width="400vw"/>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ex3-tabs-3" role="tabpanel" aria-labelledby="ex3-tab-3">
+                                <div>
+                                    <canvas id='reta_mgmt_line_graph' height="300vh" width="400vw"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+
+
+                <div style="padding: 25px;box-shadow: 2px 2px 2px 2px #dbdbe3 !important; background: #fff; border-radius: 5px; ">
+
+
+                <div class="row">
+
+
+                    <div style="height:30px; width:100%"></div>
+                    <div class="col-lg-8 graph_div_table" style="width:73%">
+
+                        <div id="tabletargets_top_cio">
+                              <div class="tableheader_new"
+                                   style="margin-bottom:2px; text-align: center;">TOP CIO's</div>
+
+                            <div class="table-responsive scroll scroll1" style="max-height:500px;">
+
+                        <table class="table table-striped">
+                           <thead style="position: sticky;top: 0; background:#aaf5e4">
+                                <tr style="font-size:16px;">
+                                    <th name="th_product_id" class="headertablefixed" style="color:#000"><strong>Unit Name</strong></th>
+
+
+                                    <th name="th_ro_total_amount" class="headertablefixed text-center"
+                                        style="color:#000"><strong>CIO Value </strong></th>
+                                    <th name="th_received_amount" class="headertablefixed text-center"
+                                        style="color:#000"><strong>Collections</strong></th>
+                                    <th name="th_progress_bar" class="headertablefixed text-center" style="color:#000"><strong>Progress</strong></th>
+                                </tr>
+                            </thead>
+                             <tbody>
+                                <t t-foreach="widget.unit_top_cio_lines" t-as="incentive_line">
+                                    <tr t-att-class='o_line_section'>
+                                        <td style='padding:10px;'>
+                                            <span><t t-esc="incentive_line.unit_name"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <span><t t-esc="incentive_line.cio_value"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <span>₹</span>
+                                            <span><t t-esc="incentive_line.top_cio_collections"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <progress id="progress_bar" t-att-value="incentive_line.progress" max="100"></progress>
+                                            <span><t t-esc="incentive_line.progress"/></span>
+                                            <span> %</span>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    </div></div>
+                     <div class="col-lg-3 graph_div" style=" margin-left:28px;">
+
+<!--                            <div class="col-md-8 graph_title">Graphs</div>-->
+                            <div class="col-md-12 graph_icon">
+                                <ul class="nav nav-tabs  mb-3" id="ex1" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                                class="nav-link active"
+                                                id="ex3-tab-1"
+                                                data-bs-toggle="tab"
+                                                href="#ex3-tabs-1"
+                                                role="tab"
+                                                aria-controls="ex3-tabs-1"
+                                                aria-selected="true"
+                                        > <i class="fa fa-pie-chart" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                                class="nav-link"
+                                                id="ex3-tab-2"
+                                                data-bs-toggle="tab"
+                                                href="#ex3-tabs-2"
+                                                role="tab"
+                                                aria-controls="ex3-tabs-2"
+                                                aria-selected="false"
+                                        ><i class="fa fa-bar-chart" aria-hidden="true"></i></a
+                                        >
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                                class="nav-link"
+                                                id="ex3-tab-3"
+                                                data-bs-toggle="tab"
+                                                href="#ex3-tabs-3"
+                                                role="tab"
+                                                aria-controls="ex3-tabs-3"
+                                                aria-selected="false"
+                                        ><i class="fa fa-line-chart" aria-hidden="true"></i></a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        <div class="tab-content" id="ex2-content">
+                            <div class="tab-pane fade show active" id="ex3-tabs-1" role="tabpanel"
+                                 aria-labelledby="ex3-tab-1">
+                                <div>
+                                    <canvas id='reta_mgmt_pie_chart' height="300vh" width="400vw"/>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
+                                <div>
+                                    <canvas id='reta_mgmt_bar_graph' height="300vh" width="400vw"/>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ex3-tabs-3" role="tabpanel" aria-labelledby="ex3-tab-3">
+                                <div>
+                                    <canvas id='reta_mgmt_line_graph' height="300vh" width="400vw"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+<!--                     <div class="col-lg-4 graph_div" style="width:40%; margin-left:28px;">-->
+
+<!--&lt;!&ndash;                            <div class="col-md-8 graph_title">Graphs</div>&ndash;&gt;-->
+<!--                            <div class="col-md-12 graph_icon">-->
+<!--                                <ul class="nav nav-tabs  mb-3" id="ex1" role="tablist">-->
+<!--                                    <li class="nav-item" role="presentation">-->
+<!--                                        <a-->
+<!--                                                class="nav-link active"-->
+<!--                                                id="ex3-tab-1"-->
+<!--                                                data-bs-toggle="tab"-->
+<!--                                                href="#ex3-tabs-1"-->
+<!--                                                role="tab"-->
+<!--                                                aria-controls="ex3-tabs-1"-->
+<!--                                                aria-selected="true"-->
+<!--                                        > <i class="fa fa-pie-chart" aria-hidden="true"></i></a>-->
+<!--                                    </li>-->
+<!--                                    <li class="nav-item" role="presentation">-->
+<!--                                        <a-->
+<!--                                                class="nav-link"-->
+<!--                                                id="ex3-tab-2"-->
+<!--                                                data-bs-toggle="tab"-->
+<!--                                                href="#ex3-tabs-2"-->
+<!--                                                role="tab"-->
+<!--                                                aria-controls="ex3-tabs-2"-->
+<!--                                                aria-selected="false"-->
+<!--                                        ><i class="fa fa-bar-chart" aria-hidden="true"></i></a-->
+<!--                                        >-->
+<!--                                    </li>-->
+<!--                                    <li class="nav-item" role="presentation">-->
+<!--                                        <a-->
+<!--                                                class="nav-link"-->
+<!--                                                id="ex3-tab-3"-->
+<!--                                                data-bs-toggle="tab"-->
+<!--                                                href="#ex3-tabs-3"-->
+<!--                                                role="tab"-->
+<!--                                                aria-controls="ex3-tabs-3"-->
+<!--                                                aria-selected="false"-->
+<!--                                        ><i class="fa fa-line-chart" aria-hidden="true"></i></a-->
+<!--                                        >-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+
+
+<!--                        <div class="tab-content" id="ex2-content">-->
+<!--                            <div class="tab-pane fade show active" id="ex3-tabs-1" role="tabpanel"-->
+<!--                                 aria-labelledby="ex3-tab-1">-->
+<!--                                <div>-->
+<!--                                    <canvas id='reta_mgmt_pie_chart' height="300vh" width="400vw"/>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">-->
+<!--                                <div>-->
+<!--                                    <canvas id='reta_mgmt_bar_graph' height="300vh" width="400vw"/>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="tab-pane fade" id="ex3-tabs-3" role="tabpanel" aria-labelledby="ex3-tab-3">-->
+<!--                                <div>-->
+<!--                                    <canvas id='reta_mgmt_line_graph' height="300vh" width="400vw"/>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+
+                    <div style="height:30px; width:100%"></div>
+
+                    <div class="col-lg-8 graph_div_table" style="width:73%">
+
+                        <div id="tabletargets">
+                              <div class="tableheader_new"
+                                   style="margin-bottom:2px; text-align: center;">LEAST CIO'S</div>
+
+                            <div class="table-responsive scroll scroll1" style="max-height:500px;">
+
+                        <table class="table table-striped">
+                           <thead style="position: sticky;top: 0; background:#aaf5e4">
+                                <tr style="font-size:16px;">
+                                    <th name="th_product_id" class="headertablefixed" style="color:#000"><strong>Unit Name</strong></th>
+                                    <th name="th_ro_total_amount" class="headertablefixed text-center"
+                                        style="color:#000"><strong>CIO Value </strong></th>
+                                    <th name="th_received_amount" class="headertablefixed text-center"
+                                        style="color:#000"><strong>Collections</strong></th>
+                                    <th name="th_progress_bar" class="headertablefixed text-center" style="color:#000"><strong>Progress</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                   <t t-foreach="widget.unit_top_cio_lines_least" t-as="incentive_line">
+                                    <tr t-att-class='o_line_section'>
+                                        <td style='padding:10px;'>
+                                            <span><t t-esc="incentive_line.unit_name"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <span><t t-esc="incentive_line.cio_value"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <span>₹</span>
+                                            <span><t t-esc="incentive_line.top_cio_collections"/></span>
+                                        </td>
+                                        <td class="text-center" style='padding:10px;'>
+                                            <progress id="progress_bar" t-att-value="incentive_line.progress" max="100"></progress>
+                                            <span><t t-esc="incentive_line.progress"/></span>
+                                            <span> %</span>
+                                        </td>
+                                    </tr>
+                                </t>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    </div></div>
+
+                    <div class="col-lg-3 graph_div" style="margin-left:28px;">
+
+<!--                            <div class="col-md-8 graph_title">Graphs</div>-->
+                            <div class="col-md-12 graph_icon">
+                                <ul class="nav nav-tabs  mb-3" id="ex1" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                                class="nav-link active"
+                                                id="ex3-tab-1"
+                                                data-bs-toggle="tab"
+                                                href="#ex3-tabs-1"
+                                                role="tab"
+                                                aria-controls="ex3-tabs-1"
+                                                aria-selected="true"
+                                        > <i class="fa fa-pie-chart" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                                class="nav-link"
+                                                id="ex3-tab-2"
+                                                data-bs-toggle="tab"
+                                                href="#ex3-tabs-2"
+                                                role="tab"
+                                                aria-controls="ex3-tabs-2"
+                                                aria-selected="false"
+                                        ><i class="fa fa-bar-chart" aria-hidden="true"></i></a
+                                        >
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a
+                                                class="nav-link"
+                                                id="ex3-tab-3"
+                                                data-bs-toggle="tab"
+                                                href="#ex3-tabs-3"
+                                                role="tab"
+                                                aria-controls="ex3-tabs-3"
+                                                aria-selected="false"
+                                        ><i class="fa fa-line-chart" aria-hidden="true"></i></a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        <div class="tab-content" id="ex2-content">
+                            <div class="tab-pane fade show active" id="ex3-tabs-1" role="tabpanel"
+                                 aria-labelledby="ex3-tab-1">
+                                <div>
+                                    <canvas id='reta_mgmt_pie_chart' height="300vh" width="400vw"/>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
+                                <div>
+                                    <canvas id='reta_mgmt_bar_graph' height="300vh" width="400vw"/>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ex3-tabs-3" role="tabpanel" aria-labelledby="ex3-tab-3">
+                                <div>
+                                    <canvas id='reta_mgmt_line_graph' height="300vh" width="400vw"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div style="height:30px; width:100%"></div>
+
+                </div>
+                </div>
+                <div style="height:30px; width:100%"></div>
+
+            </div>
+        </div>
+
+        <div class="modal" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+        <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="container mt-5 d-flex justify-content-center">
+           <div class="card p-3">
+
+                <div class="d-flex align-items-center">
+
+                    <div class="image">
+                <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80"
+                     class="rounded" width="155"/>
+                </div>
+
+                    <div class="ml-3 w-100">
+
+                   <h4 class="mb-0 mt-0">Alex HMorrision</h4>
+                        <span>Senior Journalist</span>
+
+                        <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
+
+                    <div class="d-flex flex-column">
+
+                        <span class="articles">Articles</span>
+                        <span class="number1">38</span>
+
+                    </div>
+
+                            <div class="d-flex flex-column">
+
+                        <span class="followers">Followers</span>
+                                <span class="number2">980</span>
+
+                    </div>
+
+
+                            <div class="d-flex flex-column">
+
+                        <span class="rating">Rating</span>
+                                <span class="number3">8.9</span>
+
+                    </div>
+
+                   </div>
+
+
+                        <div class="button mt-2 d-flex flex-row align-items-center">
+
+                    <button class="btn btn-sm btn-outline-primary w-100">Chat</button>
+                            <button class="btn btn-sm btn-primary w-100 ml-2">Follow</button>
+
+
+                   </div>
+
+
+                </div>
+
+
+                </div>
+
+            </div>
+
+                </div>
+
+      </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+	</div>
+    </t>
+
+</template>

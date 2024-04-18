@@ -1,0 +1,95 @@
+.pb-21 {
+    padding-bottom: 8.5rem!important;
+}
+.pt-10 {
+    padding-top: 3rem!important;
+}
+.mt-n6 {
+    margin-top: -1.5rem!important;
+}
+.mx-n4 {
+    margin-left: -1rem!important;
+    margin-right: -1rem!important;
+}
+.mb-5 {
+    margin-bottom: 1.25rem!important;
+}
+.mt-n22 {
+    margin-top: -9rem!important;
+}
+.rounded-2 {
+    border-radius: 0.375rem!important;
+}
+.bg-primary-soft {
+    --dashui-bg-opacity: 1;
+    background-color: rgba(98,75,255,.3)!important;
+}
+.fa-2x {
+    font-size: 1.5rem;
+}
+.mt-n4 {
+    margin-top: -6rem !important;
+}
+.Design2 {
+    text-align: justify;
+    margin-right: -103px;
+    margin-left: 109px;
+    margin-top: 1px;
+    display: contents;
+}
+.icon-shape {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+.icon-md {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 2.5rem;
+}
+td, th,thead {
+  border: 1px solid #dddddd;
+  }
+   .Design
+   {
+    text-align: justify;
+    margin-right: -103px;
+    margin-left: 82px;
+    margin-top: 1px;
+    }
+    .Size{
+        font-size: 15px;
+        }
+     /*.Design1{
+    text-align: -webkit-center;
+    margin-right: -160px;
+    margin-left: 85px;
+    margin-top: 1px;
+    }*/
+    .Design1 {
+    text-align: left;
+    margin-right: -145px;
+    /* margin-left: 85px; */
+    margin-top: 1px;
+}
+       .style{
+    font-weight: 500;
+    font-size: 17px;
+}
+.px-6 {
+    padding-left: 15rem !important;
+}
+.D {
+    text-align:  left;
+    margin-top: 1px;
+}
+hr:not([size]) {
+    height: 1px;
+    width: 73%;
+    margin-top: 5px;
+}
+.margin{
+margin-top: -1.7rem;
+}
